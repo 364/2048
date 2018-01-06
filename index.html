@@ -1,0 +1,124 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+    <title>2048</title>
+    <link rel="stylesheet" type="text/css" href="2048.css" />
+    <script type="text/javascript" charset="gbk" src="2048.js" ></script>
+</head>
+<body>
+    <div class="container">
+        <h1>
+            2048</h1>
+        <div class="c_right">
+            <div class="c_r_score">
+                <div class="c_r_s_title">
+                    Score
+                </div>
+                <div class="c_r_s_num" id="score">
+                    0</div>
+            </div>
+            <div class="c_r_best">
+                <div class="c_r_s_title">
+                    Best
+                </div>
+                <div class="c_r_s_num" id="best">
+                    0</div>
+            </div>
+            <div style="clear: both;">
+            </div>
+        </div>
+        <div style="clear: both;">
+        </div>
+        <div class="c_new" onclick=" window.location.reload()">
+            重新开始
+        </div>
+        <div style="clear: both;">
+        </div>
+        <div id="gridPanel">
+            <!--背景单元格-->
+            <div id="g00" class="grid">
+            </div>
+            <div id="g01" class="grid">
+            </div>
+            <div id="g02" class="grid">
+            </div>
+            <div id="g03" class="grid">
+            </div>
+            <div id="g10" class="grid">
+            </div>
+            <div id="g11" class="grid">
+            </div>
+            <div id="g12" class="grid">
+            </div>
+            <div id="g13" class="grid">
+            </div>
+            <div id="g20" class="grid">
+            </div>
+            <div id="g21" class="grid">
+            </div>
+            <div id="g22" class="grid">
+            </div>
+            <div id="g23" class="grid">
+            </div>
+            <div id="g30" class="grid">
+            </div>
+            <div id="g31" class="grid">
+            </div>
+            <div id="g32" class="grid">
+            </div>
+            <div id="g33" class="grid">
+            </div>
+            <!--前景单元格-->
+            <div id="c00" class="cell n2">
+                2</div>
+            <div id="c01" class="cell n4">
+                4</div>
+            <div id="c02" class="cell n8">
+                8</div>
+            <div id="c03" class="cell n16">
+                16</div>
+            <div id="c10" class="cell n32">
+                32</div>
+            <div id="c11" class="cell n64">
+                64</div>
+            <div id="c12" class="cell n128">
+                128</div>
+            <div id="c13" class="cell n256">
+                256</div>
+            <div id="c20" class="cell n512">
+                512</div>
+            <div id="c21" class="cell n1024">
+                1024</div>
+            <div id="c22" class="cell n2048">
+                2048</div>
+            <div id="c23" class="cell n4096">
+                4096
+            </div>
+            <div id="c30" class="cell n8192">
+                8192
+            </div>
+            <div id="c31" class="cell">
+            </div>
+            <div id="c32" class="cell">
+            </div>
+            <div id="c33" class="cell">
+            </div>
+            <!--Game Over!界面-->
+            <div id="gameOver">
+                <div class="gameOver">
+                    Game Over<br />
+                    分数:<span id="finalScore"></span><br />
+                    最高:<span id="finalBest"></span><br />
+                    <!-- <div class="button" id="restart"  onclick="start()">
+                        重来一次</div>-->
+                </div>
+            </div>
+        </div>
+        <div class="c_method">
+            （↑↓←→） 键盘上下左右滑动，每滑动一次，所有的数字方块都会往滑动的方向靠拢，同时系统也会在空白的地方出现一个数字方块<br />
+            相同数字的方块在靠拢、相撞时会相加，数字累积到2048即可过关<br />
+        </div>
+    </div>
+</body>
+</html>
